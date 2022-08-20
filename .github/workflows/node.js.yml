@@ -33,3 +33,5 @@ jobs:
       - run: pnpm install
 
       - run: pnpm wait-on http://localhost:54323 && supabase status
+
+      - run: pnpm prisma db seed
