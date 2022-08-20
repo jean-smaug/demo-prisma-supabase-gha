@@ -1,0 +1,93 @@
+lockfileVersion: 5.4
+
+specifiers:
+  wait-on: ^6.0.1
+
+dependencies:
+  wait-on: 6.0.1
+
+packages:
+
+  /@hapi/hoek/9.3.0:
+    resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
+    dev: false
+
+  /@hapi/topo/5.1.0:
+    resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
+    dependencies:
+      '@hapi/hoek': 9.3.0
+    dev: false
+
+  /@sideway/address/4.1.4:
+    resolution: {integrity: sha512-7vwq+rOHVWjyXxVlR76Agnvhy8I9rpzjosTESvmhNeXOXdZZB15Fl+TI9x1SiHZH5Jv2wTGduSxFDIaq0m3DUw==}
+    dependencies:
+      '@hapi/hoek': 9.3.0
+    dev: false
+
+  /@sideway/formula/3.0.0:
+    resolution: {integrity: sha512-vHe7wZ4NOXVfkoRb8T5otiENVlT7a3IAiw7H5M2+GO+9CDgcVUUsX1zalAztCmwyOr2RUTGJdgB+ZvSVqmdHmg==}
+    dev: false
+
+  /@sideway/pinpoint/2.0.0:
+    resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
+    dev: false
+
+  /axios/0.25.0:
+    resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
+    dependencies:
+      follow-redirects: 1.15.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /follow-redirects/1.15.1:
+    resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
+
+  /joi/17.6.0:
+    resolution: {integrity: sha512-OX5dG6DTbcr/kbMFj0KGYxuew69HPcAE3K/sZpEV2nP6e/j/C0HV+HNiBPCASxdx5T7DMoa0s8UeHWMnb6n2zw==}
+    dependencies:
+      '@hapi/hoek': 9.3.0
+      '@hapi/topo': 5.1.0
+      '@sideway/address': 4.1.4
+      '@sideway/formula': 3.0.0
+      '@sideway/pinpoint': 2.0.0
+    dev: false
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
+
+  /minimist/1.2.6:
+    resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
+    dev: false
+
+  /rxjs/7.5.6:
+    resolution: {integrity: sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==}
+    dependencies:
+      tslib: 2.4.0
+    dev: false
+
+  /tslib/2.4.0:
+    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
+    dev: false
+
+  /wait-on/6.0.1:
+    resolution: {integrity: sha512-zht+KASY3usTY5u2LgaNqn/Cd8MukxLGjdcZxT2ns5QzDmTFc4XoWBgC+C/na+sMRZTuVygQoMYwdcVjHnYIVw==}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    dependencies:
+      axios: 0.25.0
+      joi: 17.6.0
+      lodash: 4.17.21
+      minimist: 1.2.6
+      rxjs: 7.5.6
+    transitivePeerDependencies:
+      - debug
+    dev: false

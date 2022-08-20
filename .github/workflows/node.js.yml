@@ -1,0 +1,35 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: 🤖 Node.js CI
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Supabase needs "supabase/config.toml"
+      # so checkout needs to be runned first
+      #
+      # Since "supabase start" takes time,
+      # it's executed in background.
+      - uses: supabase/setup-cli@v1
+      - run: supabase start &
+
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.14.2"
+          cache: "pnpm"
+
+      - run: pnpm install
+
+      - run: wait-on http://localhost:54321 && supabase status
