@@ -32,4 +32,4 @@ jobs:
 
       - run: pnpm install
 
-      - run: wait-on http://localhost:54321 && supabase status
+      - run: pnpm wait-on http://localhost:54321 && supabase status
