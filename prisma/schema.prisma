@@ -11,5 +11,6 @@ datasource db {
 }
 
 model Post {
-  id String @id @db.Uuid
+  id Int @id
+  title String
 }

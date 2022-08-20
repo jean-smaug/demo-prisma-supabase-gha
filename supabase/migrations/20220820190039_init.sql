@@ -1,6 +1,7 @@
 -- CreateTable
 CREATE TABLE "Post" (
-    "id" UUID NOT NULL,
+    "id" INTEGER NOT NULL,
+    "title" TEXT NOT NULL,
 
     CONSTRAINT "Post_pkey" PRIMARY KEY ("id")
 );
